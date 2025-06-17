@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "Lập trình C++ cơ bản, nâng cao",
+        "originalPrice": "3.500.000",
+        "currentPrice": "3.000.000",
+        "instructor": "TTA",
+        "duration": "3 tháng",
+        "gradient": "cpp-gradient",
+        "displayText": "C++",
+        "subtitle": "Từ cơ bản\nđến nâng cao"
+    },
+    {
+        "id": 2,
+        "title": "Lập trình React JS",
+        "originalPrice": "2.500.000",
+        "currentPrice": "2.000.000",
+        "instructor": "PTA",
+        "duration": "6 tháng",
+        "gradient": "react-gradient",
+        "displayText": "React JS",
+        "subtitle": "Learn once, write anywhere"
+    },
+    {
+        "id": 3,
+        "title": "Lập trình JavaScript cơ bản",
+        "originalPrice": "1.800.000",
+        "currentPrice": "1.500.000",
+        "instructor": "HMD",
+        "duration": "4 tháng",
+        "gradient": "js-basic-gradient",
+        "displayText": "JavaScript",
+        "subtitle": "{Cơ bản}"
+    },
+    {
+        "id": 4,
+        "title": "Lập trình Node & Express.JS",
+        "originalPrice": "2.500.000",
+        "currentPrice": "2.000.000",
+        "instructor": "NQS",
+        "duration": "6 tháng",
+        "gradient": "nodejs-gradient",
+        "displayText": "Node & Express.JS",
+        "subtitle": ""
+    },
+    {
+        "id": 5,
+        "title": "Lập trình JavaScript nâng cao",
+        "originalPrice": "3.500.000",
+        "currentPrice": "3.000.000",
+        "instructor": "TTA",
+        "duration": "6 tháng",
+        "gradient": "js-advanced-gradient",
+        "displayText": "JavaScript",
+        "subtitle": "{Nâng cao}"
+    },
+    {
+        "id": 6,
+        "title": "Nền tảng Web",
+        "originalPrice": "1.500.000",
+        "currentPrice": "1.000.000",
+        "instructor": "TTA",
+        "duration": "3 tháng",
+        "gradient": "html-gradient",
+        "displayText": "HTML, CSS",
+        "subtitle": "từ zero đến hero"
+    }
+]
