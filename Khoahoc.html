@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết khóa học - DAS Học Lập trình Để Đi Làm</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="DAS Logo" class="logo">
+      </a>
+      <div class="navbar-brand d-flex align-items-center">DAS Học Lập Trình Để Đi Làm</div>
+      <div class="search-box mx-auto">
+        <div class="position-relative">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" class="form-control" placeholder="Tìm kiếm khóa học..." >
+        </div>
+      </div>
+      <div class="user-info">
+        <i class="bi bi-bell"></i>
+        <span>Tuấn Anh</span>
+        <i class="bi bi-person-circle fs-4"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-lg-2 sidebar">
+        <a href="index.html" class="sidebar-item active">
+          <i class="bi bi-house-door-fill sidebar-icon"></i>
+          <span>Trang chủ</span>
+        </a>
+        <a href="Giohang.html" class="sidebar-item position-relative">
+          <i class="bi bi-cart3 sidebar-icon"></i>
+          <span>Giỏ hàng</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="bi bi-book sidebar-icon"></i>
+          <span>Khóa học</span>
+        </a>
+      </div>
+      <div class="col-md-9 col-lg-10 main-content">
+        <div class="detail-panel bg-white p-4 rounded shadow-sm">
+          <div class="mb-3">
+            <i class="bi bi-arrow-left fs-3 text-dark" style="cursor: pointer;" onclick="window.location.href='index.html'"></i>
+          </div>
+          <div class="section mb-4">
+            <h1 class="mb-2">Cách dễ nhất để học Javascript cho người mới bắt đầu</h1>
+            <p class="text-muted mb-0">Xây dựng dự án thực tế từ cơ bản tới chuyên sâu, được thiết kế và hướng dẫn bởi HMD</p>
+          </div>
+          <hr>
+          <div class="section mb-4">
+            <ul class="list-unstyled mb-0">
+              <li><strong>Khóa học:</strong> Lập trình Javascript cơ bản</li>
+              <li><strong>Mã khóa học:</strong> JVS001</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="section mb-4">
+            <h5 class="section-title d-flex align-items-center">
+              <i class="bi bi-list-ul me-2"></i>
+              <span>Nội dung khóa học</span>
+            </h5>
+            <div class="row gx-4 gy-2">
+              <div class="col-6">
+                <ul class="ps-3">
+                  <li>Biến (var, let, const)</li>
+                  <li>Hàm và các loại hàm</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="ps-3">
+                  <li>Tư duy ứng dụng vòng lặp</li>
+                  <li>Hiểu rõ về toán tử ++, --</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="section mb-4">
+            <strong>Lộ trình học:</strong> 6/6/2025 → 6/10/2025
+          </div>
+          <hr>
+          <div class="section d-flex justify-content-end align-items-center">
+            <h3 class="text-danger me-3 mb-0">Giá: 1.500.000đ</h3>
+            <button class="btn btn-danger btn-lg" onclick="handleAddToCart()">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup" class="position-fixed top-50 start-50 translate-middle bg-white shadow rounded px-4 py-3 d-none" style="z-index: 1050; min-width: 300px;">
+    <div class="d-flex justify-content-between align-items-center border-bottom mb-2">
+      <strong>Thông báo</strong>
+      <button class="btn btn-sm btn-light border-0" onclick="hidePopup()">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <p class="mb-0">Thêm vào giỏ hàng thành công</p>
+  </div>
+  <!-- Popup khóa học đã tồn tại -->
+<div id="popupExists" class="position-fixed top-50 start-50 translate-middle bg-white shadow rounded px-4 py-3 d-none" style="z-index: 1050; min-width: 300px;">
+  <div class="d-flex justify-content-between align-items-center border-bottom mb-2">
+    <strong>Thông báo</strong>
+    <button class="btn btn-sm btn-light border-0" onclick="hidePopupExists()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <p class="mb-0">Khóa học này đã có trong giỏ hàng</p>
+</div>
+
+
+<!-- Footer được chèn từ index.html -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 footer-section">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="DAS Logo" class="logo">
+          <div class="brand-text">Học Lập Trình Để Đi Làm</div>
+        </div>
+        <div class="contact-info">
+          <p><strong>Điện thoại:</strong> 08 1919 8989</p>
+          <p><strong>Email:</strong> contact@fullstack.edu.vn</p>
+          <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+        </div>
+        <div class="dmca-badge">
+          <div style="background: #00a8ff; color: white; padding: 8px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold;">
+            DMCA PROTECTED
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-section">
+        <h4 class="footer-title">VỀ DAS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Điều khoản</a></li>
+          <li><a href="#">Bảo mật</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-section">
+        <h4 class="footer-title">SẢN PHẨM</h4>
+        <ul class="footer-links">
+          <li><a href="#">Game Nester</a></li>
+          <li><a href="#">Game CSS Diner</a></li>
+          <li><a href="#">Game CSS Selectors</a></li>
+          <li><a href="#">Game Froggy</a></li>
+          <li><a href="#">Game Froggy Pro</a></li>
+          <li><a href="#">Game Scoops</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-section">
+        <h4 class="footer-title">CÔNG CỤ</h4>
+        <ul class="footer-links">
+          <li><a href="#">Tạo CV xin việc</a></li>
+          <li><a href="#">Rút gọn liên kết</a></li>
+          <li><a href="#">Clip-path maker</a></li>
+          <li><a href="#">Snippet generator</a></li>
+          <li><a href="#">CSS Grid generator</a></li>
+          <li><a href="#">Cảnh báo sờ tay lên mặt</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-section">
+        <h4 class="footer-title">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC DAS</h4>
+        <div class="contact-info">
+          <p><strong>Mã số thuế:</strong> 0109922901</p>
+          <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+          <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình.</p>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2018 - 2025 DAS. Nền tảng học lập trình hàng đầu Việt Nam</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/courseDetails.js"></script>
+<script>
+  function showPopup() {
+    document.getElementById('popup').classList.remove('d-none');
+    setTimeout(hidePopup, 3000);
+  }
+  function hidePopup() {
+    document.getElementById('popup').classList.add('d-none');
+  }
+  function handleAddToCart() {
+  const selectedCourse = JSON.parse(localStorage.getItem('selectedCourse'));
+  if (!selectedCourse) return;
+
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const exists = cart.some(item => item.id === selectedCourse.id);
+  if (exists) {
+    showPopupExists();
+    return;
+  }
+
+  cart.push(selectedCourse);
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  showPopup(); // Thêm thành công
+
+  const cartIcon = document.querySelector('.bi-cart3');
+  if (!document.querySelector('.cart-indicator')) {
+    const dot = document.createElement('span');
+    dot.className = 'cart-indicator position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle';
+    dot.style.zIndex = '1000';
+    dot.style.width = '10px';
+    dot.style.height = '10px';
+    cartIcon.parentElement.style.position = 'relative';
+    cartIcon.parentElement.appendChild(dot);
+  }
+}
+function showPopupExists() {
+  document.getElementById('popupExists').classList.remove('d-none');
+  setTimeout(hidePopupExists, 3000);
+}
+function hidePopupExists() {
+  document.getElementById('popupExists').classList.add('d-none');
+}
+
+</script>
+</body>
+</html>
