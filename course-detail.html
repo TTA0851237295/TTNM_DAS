@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết khóa học - DAS</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="DAS Logo" class="logo">
+            </a>
+            <div class="navbar-brand d-flex align-items-center">DAS Học Lập Trình Để Đi Làm</div>
+            
+            <div class="search-box mx-auto">
+                <div class="position-relative">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="text" class="form-control" placeholder="Tìm kiếm khóa học..." id="searchInput">
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <i class="bi bi-bell"></i>
+                <span>Tuấn Anh</span>
+                <i class="bi bi-person-circle fs-4" id="userIcon"></i>
+                <!-- User Dropdown -->
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            TTA
+                        </div>
+                        <div class="user-details">
+                            <h5>Tuấn Anh</h5>
+                        </div>
+                    </div>
+                
+                    <div class="dropdown-menu-items">
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-person"></i>
+                            <span>Trang cá nhân</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Lịch sử mua</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-gear"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <a href="index.html" class="sidebar-item">
+                    <i class="bi bi-house-door-fill sidebar-icon"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="Giohang.html" class="sidebar-item">
+                    <i class="bi bi-cart3 sidebar-icon"></i>
+                    <span>Giỏ hàng</span>
+                </a>
+                <a href="my-courses.html" class="sidebar-item">
+                    <i class="bi bi-book sidebar-icon"></i>
+                    <span>Khóa học</span>
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-arrow-left fs-4 me-3" style="cursor: pointer;" onclick="window.history.back()"></i>
+                    <h1 class="page-title mb-0">Thông tin khóa học đã mua</h1>
+                </div>
+
+                <!-- Course Detail Card -->
+                <div class="course-detail-container">
+                    <div class="course-detail-card">
+                        <!-- Course Image -->
+                        <div class="course-image-section">
+                            <div class="course-image-container">
+                                <div class="course-gradient c-gradient">
+                                    <div class="course-text">
+                                        <div class="course-icon">C++</div>
+                                        <div class="course-subtitle">Từ cơ bản đến nâng cao</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Info -->
+                        <div class="course-info-section">
+                            <div class="course-info-content">
+                                <div class="info-item">
+                                    <span class="info-label">Mã Đơn Hàng:</span>
+                                    <span class="info-value">DASCPP057903893965</span>
+                                </div>
+
+                                <div class="info-item">
+                                    <span class="info-label">Tên Khóa Học:</span>
+                                    <span class="info-value">Lập trình C++ cơ bản, nâng cao</span>
+                                </div>
+
+                                <div class="info-item">
+                                    <span class="info-label">Ngày mua:</span>
+                                    <span class="info-value">05/06/2025</span>
+                                </div>
+
+                                <div class="info-item">
+                                    <span class="info-label">Phương thức thanh toán:</span>
+                                    <span class="info-value">Chuyển Khoản qua mã QR</span>
+                                </div>
+
+                                <div class="info-item">
+                                    <span class="info-label">Tổng tiền:</span>
+                                    <span class="info-value price">1000000 vnđ</span>
+                                </div>
+
+                                <div class="info-item">
+                                    <span class="info-label">Trạng thái thanh toán:</span>
+                                    <span class="info-value status-paid">Đã thanh toán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <div class="footer-brand">
+                        <img src="img/logo.png" alt="DAS Logo" class="logo">
+                        <div class="brand-text">Học Lập Trình Để Đi Làm</div>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Điện thoại:</strong> 08 1919 8989</p>
+                        <p><strong>Email:</strong> contact@fullstack.edu.vn</p>
+                        <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                    </div>
+                    <div class="dmca-badge">
+                        <div style="background: #00a8ff; color: white; padding: 8px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold;">
+                            DMCA PROTECTED
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About DAS -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">VỀ DAS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Điều khoản</a></li>
+                        <li><a href="#">Bảo mật</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">SẢN PHẨM</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Game Nester</a></li>
+                        <li><a href="#">Game CSS Diner</a></li>
+                        <li><a href="#">Game CSS Selectors</a></li>
+                        <li><a href="#">Game Froggy</a></li>
+                        <li><a href="#">Game Froggy Pro</a></li>
+                        <li><a href="#">Game Scoops</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">CÔNG CỤ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tạo CV xin việc</a></li>
+                        <li><a href="#">Rút gọn liên kết</a></li>
+                        <li><a href="#">Clip-path maker</a></li>
+                        <li><a href="#">Snippet generator</a></li>
+                        <li><a href="#">CSS Grid generator</a></li>
+                        <li><a href="#">Cảnh báo sờ tay lên mặt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Details -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-title">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC DAS</h4>
+                    <div class="contact-info">
+                        <p><strong>Mã số thuế:</strong> 0109922901</p>
+                        <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                        <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2018 - 2025 DAS. Nền tảng học lập trình hàng đầu Việt Nam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Load course data from localStorage and update the page
+        document.addEventListener('DOMContentLoaded', function() {
+            const courseData = JSON.parse(localStorage.getItem('selectedCourse'));
+            
+            if (courseData) {
+                // Update course image and gradient
+                const courseGradient = document.querySelector('.course-gradient');
+                courseGradient.className = `course-gradient ${courseData.gradient}`;
+                
+                // Update course icon/title
+                const courseIcon = document.querySelector('.course-icon');
+                const courseSubtitle = document.querySelector('.course-subtitle');
+                
+                if (courseData.icon === '⚛') {
+                    courseIcon.innerHTML = courseData.icon;
+                    courseIcon.className = 'react-logo';
+                    const titleElement = document.querySelector('.course-title-text');
+                    if (titleElement) titleElement.textContent = 'React JS';
+                } else if (courseData.icon.includes('JavaScript') || courseData.icon.includes('Node')) {
+                    courseIcon.className = 'course-title-text';
+                    courseIcon.textContent = courseData.icon;
+                } else {
+                    courseIcon.textContent = courseData.icon;
+                }
+                
+                if (courseSubtitle) {
+                    courseSubtitle.textContent = courseData.subtitle;
+                }
+                
+                // Update course information
+                document.querySelector('.info-item:nth-child(1) .info-value').textContent = courseData.orderId;
+                document.querySelector('.info-item:nth-child(2) .info-value').textContent = courseData.title;
+                document.querySelector('.info-item:nth-child(3) .info-value').textContent = courseData.purchaseDate;
+                document.querySelector('.info-item:nth-child(4) .info-value').textContent = courseData.paymentMethod;
+                document.querySelector('.info-item:nth-child(5) .info-value').textContent = courseData.price;
+                document.querySelector('.info-item:nth-child(6) .info-value').textContent = courseData.status;
+            }
+        });
+
+        // User dropdown functionality
+        const userIcon = document.getElementById('userIcon');
+        const userDropdown = document.getElementById('userDropdown');
+        
+        // Toggle dropdown when clicking user icon
+        userIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!userDropdown.contains(e.target) && !userIcon.contains(e.target)) {
+                userDropdown.classList.remove('show');
+            }
+        });
+        
+        // Prevent dropdown from closing when clicking inside it
+        userDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Handle dropdown item clicks
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const text = this.querySelector('span').textContent;
+                
+                // Handle different menu items
+                switch(text) {
+                    case 'Trang cá nhân':
+                        alert('Chuyển đến trang cá nhân');
+                        break;
+                    case 'Lịch sử mua':
+                        window.location.href = 'purchase-history.html';
+                        break;
+                    case 'Cài đặt':
+                        alert('Chuyển đến trang cài đặt');
+                        break;
+                    case 'Đăng xuất':
+                        if(confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                            alert('Đăng xuất thành công!');
+                            // Here you would typically redirect to login page
+                        }
+                        break;
+                }
+                
+                // Close dropdown after action
+                userDropdown.classList.remove('show');
+            });
+        });
+        
+        // Add keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                userDropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <style>
+        /* Course Detail Specific Styles */
+        .course-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .course-detail-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            min-height: 400px;
+        }
+
+        .course-image-section {
+            flex: 0 0 400px;
+            background: #f8f9fa;
+        }
+
+        .course-image-container {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .course-gradient {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .c-gradient {
+            background: linear-gradient(135deg, #00CED1, #20B2AA);
+        }
+
+        .course-text {
+            padding: 40px;
+        }
+
+        .course-icon {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .course-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .course-info-section {
+            flex: 1;
+            padding: 40px;
+            background: #fafbfc;
+        }
+
+        .course-info-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .info-value.price {
+            color: #e74c3c;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .info-value.status-paid {
+            color: #27ae60;
+            font-weight: 700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .course-detail-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .course-image-section {
+                flex: none;
+                height: 250px;
+            }
+
+            .course-image-container {
+                min-height: 250px;
+            }
+
+            .course-text {
+                padding: 30px 20px;
+            }
+
+            .course-icon {
+                font-size: 3rem;
+                margin-bottom: 15px;
+            }
+
+            .course-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .course-info-section {
+                padding: 30px 20px;
+            }
+
+            .course-info-content {
+                gap: 20px;
+            }
+
+            .info-value {
+                font-size: 1rem;
+            }
+
+            .info-value.price {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .course-detail-container {
+                padding: 10px;
+            }
+
+            .course-detail-card {
+                margin: 0 -10px;
+                border-radius: 15px;
+            }
+
+            .course-info-section {
+                padding: 25px 15px;
+            }
+
+            .course-text {
+                padding: 25px 15px;
+            }
+        }
+
+        /* Page title styling */
+        .page-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* Back button hover effect */
+        .bi-arrow-left:hover {
+            color: #667eea !important;
+            transform: translateX(-3px);
+            transition: all 0.2s ease;
+        }
+    </style>
+</body>
+</html>

@@ -90,3 +90,64 @@ document.addEventListener('click', function(e) {
         }, 150);
     }
 });
+
+// User dropdown functionality
+const userIcon = document.getElementById('userIcon');
+const userDropdown = document.getElementById('userDropdown');
+
+// Toggle dropdown when clicking user icon
+userIcon.addEventListener('click', function(e) {
+    e.stopPropagation();
+    userDropdown.classList.toggle('show');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!userDropdown.contains(e.target) && !userIcon.contains(e.target)) {
+        userDropdown.classList.remove('show');
+    }
+});
+
+// Prevent dropdown from closing when clicking inside it
+userDropdown.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+// Handle dropdown item clicks
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const text = this.querySelector('span').textContent;
+        
+        // Handle different menu items
+        switch(text) {
+            case 'Trang cá nhân':
+                alert('Chuyển đến trang cá nhân');
+                break;
+            case 'Lịch sử mua':
+                // Điều hướng đến trang lịch sử mua
+                window.location.href = 'purchase-history.html';
+                break;
+            case 'Cài đặt':
+                alert('Chuyển đến trang cài đặt');
+                break;
+            case 'Đăng xuất':
+                if(confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                    alert('Đăng xuất thành công!');
+                    // Here you would typically redirect to login page
+                }
+                break;
+        }
+        
+        // Close dropdown after action
+        userDropdown.classList.remove('show');
+    });
+});
+
+// Add keyboard support
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        userDropdown.classList.remove('show');
+    }
+});
