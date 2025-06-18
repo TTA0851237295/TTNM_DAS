@@ -636,3 +636,9 @@ body {
         font-size: 0.75rem;
     }
 }
+/* --- CSS để link thẻ khóa học hiển thị đẹp hơn --- */
+
+a.course-card-link {
+    text-decoration: none; /* Bỏ gạch chân của link */
+    color: inherit; /* Giữ lại màu chữ gốc của card */
+}

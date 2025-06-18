@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem khóa học</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/course-player.style.css">
+</head>
+<body>
+    <div class="player-wrapper">
+        <header class="player-header">
+            <a href="my-courses.html" class="back-link"><i class="bi bi-chevron-left"></i><span>Quay lại</span></a>
+            <div class="course-progress"><span id="progress-text"></span></div>
+            <button class="notes-btn"><i class="bi bi-pencil-square"></i>Ghi chú</button>
+        </header>
+
+        <div class="player-main">
+            <div class="video-content-area">
+                <div class="video-player-placeholder">
+                    <video id="video-player-element" width="100%" height="100%" controls autoplay>
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                </div>
+                <div class="video-footer">
+                    <h2 id="course-title">Đang tải...</h2>
+                </div>
+            </div>
+
+            <aside class="lesson-sidebar">
+                <h3>Nội dung môn học</h3>
+                <div class="lesson-list-container" id="lesson-list">
+                    <p style="padding: 16px;">Đang tải danh sách bài học...</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="js/course-player.script.js"></script>
+</body>
+</html>
