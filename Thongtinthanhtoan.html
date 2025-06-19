@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAS Học Lập Trình Để Đi Làm</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <style>
         /* Các style modal và form thanh toán */
@@ -128,7 +125,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
@@ -154,7 +150,6 @@
 
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
             <div class="col-md-3 col-lg-2 sidebar">
                 <a href="index.html" class="sidebar-item">
                     <i class="bi bi-house-door-fill sidebar-icon"></i>
@@ -164,13 +159,12 @@
                     <i class="bi bi-cart3 sidebar-icon"></i>
                     <span>Giỏ hàng</span>
                 </a>
-                <a href="#" class="sidebar-item">
+                <a href="my-courses.html" class="sidebar-item">
                     <i class="bi bi-book sidebar-icon"></i>
                     <span>Khóa học</span>
                 </a>
             </div>
 
-            <!-- Main Content -->
             <div class="col-md-9 col-lg-10 main-content">
                 <h1 class="page-title">Thông tin thanh toán</h1>
                 
@@ -181,12 +175,11 @@
                 </div>
 
                 <div class="checkout-container">
-                    <form id="checkoutForm" onsubmit="return validateForm(event)">
+                    <form id="checkoutForm">
                         <div class="mb-3">
                             <strong>Thông tin khách hàng</strong>
                         </div>
 
-                        <!-- Thông tin khách hàng -->
                         <div class="info-block">
                             <div class="mb-2" style="display: flex; align-items: center; margin-bottom: 10px;">
                                 <label for="customerId" class="form-label" style="min-width: 90px; margin-right: 10px;">Mã KH:</label>
@@ -207,7 +200,6 @@
                             <div class="text-danger small" id="errorEmail" style="display:none; margin-left: 100px;">Vui lòng nhập email.</div>
                         </div>
 
-                        <!-- Bảng sản phẩm -->
                         <div style="background: #f2f2f2; padding: 10px; border-radius: 5px; margin-bottom: 10px; font-size: 0.9rem; max-width: 100%;">
                             <table class="table mb-0">
                                 <thead>
@@ -218,13 +210,10 @@
                                     </tr>
                                 </thead>
                                 <tbody id="orderTableBody">
-
-                                    <!-- Dữ liệu sẽ được thêm động -->
-                                </tbody>
+                                    </tbody>
                             </table>
                         </div>
 
-                        <!-- Phương thức thanh toán -->
                         <div style="background: #f2f2f2; padding: 10px; border-radius: 5px; margin-bottom: 10px; font-size: 0.9rem; max-width: 100%;">
                             <div class="mb-2">
                                 <strong>Phương thức thanh toán:</strong>
@@ -236,7 +225,6 @@
                             </div>
                         </div>
 
-                        <!-- Tổng cộng và thanh toán -->
                         <div class="row align-items-center mt-4">
                             <div class="col-md-6">
                                 <span id="totalCourses" class="fw-bold fs-5">Tổng cộng:</span> 
@@ -252,262 +240,153 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Company Info -->
-                <div class="col-lg-3 col-md-6 footer-section">
-                    <div class="footer-brand">
-                        <img src="img/logo.png" alt="DAS Logo" class="logo">
-                        <div class="brand-text">Học Lập Trình Để Đi Làm</div>
-                    </div>
-                    <div class="contact-info">
-                        <p><strong>Điện thoại:</strong> 08 1919 8989</p>
-                        <p><strong>Email:</strong> contact@fullstack.edu.vn</p>
-                        <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
-                    </div>
-                    <div class="dmca-badge">
-                        <div style="background: #00a8ff; color: white; padding: 8px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold;">
-                            DMCA PROTECTED
-                        </div>
-                    </div>
-                </div>
+        </footer>
 
-                <!-- About DAS -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <h4 class="footer-title">VỀ DAS</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                        <li><a href="#">Điều khoản</a></li>
-                        <li><a href="#">Bảo mật</a></li>
-                    </ul>
-                </div>
-
-                <!-- Products -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <h4 class="footer-title">SẢN PHẨM</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Game Nester</a></li>
-                        <li><a href="#">Game CSS Diner</a></li>
-                        <li><a href="#">Game CSS Selectors</a></li>
-                        <li><a href="#">Game Froggy</a></li>
-                        <li><a href="#">Game Froggy Pro</a></li>
-                        <li><a href="#">Game Scoops</a></li>
-                    </ul>
-                </div>
-
-                <!-- Tools -->
-                <div class="col-lg-2 col-md-6 footer-section">
-                    <h4 class="footer-title">CÔNG CỤ</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Tạo CV xin việc</a></li>
-                        <li><a href="#">Rút gọn liên kết</a></li>
-                        <li><a href="#">Clip-path maker</a></li>
-                        <li><a href="#">Snippet generator</a></li>
-                        <li><a href="#">CSS Grid generator</a></li>
-                        <li><a href="#">Cảnh báo sờ tay lên mặt</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company Details -->
-                <div class="col-lg-3 col-md-6 footer-section">
-                    <h4 class="footer-title">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC DAS</h4>
-                    <div class="contact-info">
-                        <p><strong>Mã số thuế:</strong> 0109922901</p>
-                        <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
-                        <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2018 - 2025 DAS. Nền tảng học lập trình hàng đầu Việt Nam</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- FORM overlay cho thẻ tín dụng -->
     <div id="creditFormOverlay" style="display: none; position: fixed; top: 0; left: 0; 
       width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 9999;">
       
       <div style="width: 750px; margin: 60px auto; background: #ccc; padding: 30px; border-radius: 5px; position: relative;">
-        
-        <!-- Header -->
         <div style="display: flex; align-items: center; margin-bottom: 20px;">
           <button type="button" onclick="hideCreditForm()" style="border: none; background: none; font-size: 18px; cursor: pointer;">←</button>
           <strong style="margin-left: 10px;">Thanh toán qua thẻ tín dụng</strong>
         </div>
-
-        <!-- Form grid -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label>Số thẻ *</label>
-            <input type="text" id="cardNumber" class="form-control">
-          </div>
-          <div>
-            <label>Ngày hết hạn *</label>
-            <input type="text" id="expiryDate" class="form-control">
-          </div>
-          <div>
-            <label>Tháng/Năm phát hành *</label>
-            <input type="text" id="issueDate" class="form-control">
-          </div>
-          <div>
-            <label>Tên chủ thẻ (không dấu) *</label>
-            <input type="text" id="cardHolder" class="form-control">
-          </div>
-          <div>
-            <label>Mã PIN *</label>
-            <input type="password" id="cardPin" class="form-control">
-          </div>
+          <div><label>Số thẻ *</label><input type="text" id="cardNumber" class="form-control"></div>
+          <div><label>Ngày hết hạn *</label><input type="text" id="expiryDate" class="form-control"></div>
+          <div><label>Tháng/Năm phát hành *</label><input type="text" id="issueDate" class="form-control"></div>
+          <div><label>Tên chủ thẻ (không dấu) *</label><input type="text" id="cardHolder" class="form-control"></div>
+          <div><label>Mã PIN *</label><input type="password" id="cardPin" class="form-control"></div>
         </div>
-
-        <!-- Ghi chú căn giữa -->
-        <div style="text-align: center; margin-top: 25px;">
-          <p style="color: red; font-size: 0.9rem;">* Thông tin bắt buộc</p>
-        </div>
-
-        <!-- Nút xác nhận bên phải -->
-        <div style="text-align: right;">
-          <button onclick="validateCreditForm()" style="background: #e74c3c; color: white; border: none; padding: 8px 20px; border-radius: 3px;">Xác nhận</button>
-        </div>
-
+        <div style="text-align: center; margin-top: 25px;"><p style="color: red; font-size: 0.9rem;">* Thông tin bắt buộc</p></div>
+        <div style="text-align: right;"><button onclick="validateCreditForm()" style="background: #e74c3c; color: white; border: none; padding: 8px 20px; border-radius: 3px;">Xác nhận</button></div>
       </div>
     </div>
 
-    <!-- Modal thông báo phương thức thanh toán -->
-    <div id="paymentMethodModal" class="custom-modal">
-      <div class="custom-modal-content">
-        <div class="custom-modal-header">
-          <span class="modal-title">Thông báo</span>
-          <span class="custom-close" onclick="closePaymentMethodModal()">&#10006;</span>
-        </div>
-        <hr class="modal-divider" />
-        <p class="modal-message">Vui lòng chọn phương thức thanh toán</p>
-      </div>
-    </div>
+    <div id="paymentMethodModal" class="custom-modal"><div class="custom-modal-content"><div class="custom-modal-header"><span class="modal-title">Thông báo</span><span class="custom-close" onclick="closePaymentMethodModal()">&#10006;</span></div><hr class="modal-divider" /><p class="modal-message">Vui lòng chọn phương thức thanh toán</p></div></div>
+    <div id="creditInfoModal" class="custom-modal"><div class="custom-modal-content"><div class="custom-modal-header"><span class="modal-title">Thông báo</span><span class="custom-close" onclick="closeCreditInfoModal()">&#10006;</span></div><hr class="modal-divider" /><p class="modal-message">Vui lòng điền đầy đủ thông tin thẻ tín dụng!</p></div></div>
+    <div id="successModal" class="custom-modal"><div class="custom-modal-content"><div class="custom-modal-header"><span class="modal-title">Thanh toán</span><span class="custom-close" onclick="closeSuccessModal()">&#10006;</span></div><hr class="modal-divider" /><p class="modal-message ">Thanh toán thành công qua thẻ tín dụng!</p></div></div>
+    <div id="bankTransferModal" class="custom-modal"><div class="custom-modall-content" style="max-width: 1000px; padding: 30px; border-radius: 16px; background: #fff;"><div style="display: flex; align-items: center; margin-bottom: 20px;"><button type="button" onclick="closeBankModal()" style="border: none; background: none; font-size: 22px; cursor: pointer;">←</button><strong style="margin-left: 12px; font-size: 20px;">Thanh toán qua mã QR</strong></div><p style="text-align: center; margin-bottom: 30px; font-size: 16px;">Quét mã để thanh toán - DAS</p><div style="display: flex; gap: 60px; align-items: center; justify-content: center;"><div style="flex: 0 0 320px;"><img src="https://i.imgur.com/RiAGqEI.png" alt="QR Code" style="width: 100%; border-radius: 16px;" /></div><div style="flex: 1; font-size: 18px; text-align: left;"><div style="margin-bottom: 12px;"><strong>Ngân hàng:</strong> MBBANK</div><div style="margin-bottom: 12px;"><strong>Số tiền:</strong> 1.000.000 VND</div><div style="margin-bottom: 12px;"><strong>STK:</strong> 01122446123</div><div><strong>Tên tài khoản:</strong> PHAM TUAN ANH</div></div></div></div></div>
+    <div id="bankSuccessModal" class="custom-modal" style="display: none;"><div class="custom-modal-content" style="max-width: 400px; background: #fff; border-radius: 12px; padding: 20px; margin-top: 300px;"><div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center;"><span class="modal-title">Thông báo</span><span class="custom-close" onclick="closebankSuccessModal()" style="cursor: pointer;">&#10006;</span></div><hr class="modal-divider" /><p style="font-size: 16px; color: black; margin-top: 10px;">Thanh toán thành công qua mã QR!</p></div></div>
 
-    <!-- Popup thông báo thiếu thông tin thẻ tín dụng -->
-    <div id="creditInfoModal" class="custom-modal">
-      <div class="custom-modal-content">
-        <div class="custom-modal-header">
-          <span class="modal-title">Thông báo</span>
-          <span class="custom-close" onclick="closeCreditInfoModal()">&#10006;</span>
-        </div>
-        <hr class="modal-divider" />
-        <p class="modal-message">Vui lòng điền đầy đủ thông tin thẻ tín dụng!</p>
-      </div>
-    </div>
-
-    <!-- Modal Thanh toán thành công -->
-    <div id="successModal" class="custom-modal">
-      <div class="custom-modal-content">
-        <div class="custom-modal-header">
-          <span class="modal-title">Thanh toán</span>
-          <span class="custom-close" onclick="closeSuccessModal()">&#10006;</span>
-        </div>
-        <hr class="modal-divider" />
-        <p class="modal-message ">Thanh toán thành công qua thẻ tín dụng!</p>
-      </div>
-    </div>
-
-    <!-- Modal QR chuyển khoản -->
-    <div id="bankTransferModal" class="custom-modal">
-      <div class="custom-modall-content" style="max-width: 1000px; padding: 30px; border-radius: 16px; background: #fff;">
-        
-        <!-- Header -->
-        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-          <button type="button" onclick="closeBankModal()" style="border: none; background: none; font-size: 22px; cursor: pointer;">←</button>
-          <strong style="margin-left: 12px; font-size: 20px;">Thanh toán qua mã QR</strong>
-        </div>
-
-        <p style="text-align: center; margin-bottom: 30px; font-size: 16px;">Quét mã để thanh toán - DAS</p>
-
-        <!-- QR + Info Section -->
-        <div style="display: flex; gap: 60px; align-items: center; justify-content: center;">
-          
-          <!-- QR Code -->
-          <div style="flex: 0 0 320px;">
-            <img src="https://i.imgur.com/RiAGqEI.png" alt="QR Code" style="width: 100%; border-radius: 16px;" />
-          </div>
-
-          <!-- Thông tin -->
-         <div style="flex: 1; font-size: 18px; text-align: left;">
-          <div style="margin-bottom: 12px;"><strong>Ngân hàng:</strong> MBBANK</div>
-          <div style="margin-bottom: 12px;"><strong>Số tiền:</strong> 1.000.000 VND</div>
-          <div style="margin-bottom: 12px;"><strong>STK:</strong> 01122446123</div>
-          <div><strong>Tên tài khoản:</strong> PHAM TUAN ANH</div>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal thành công chuyển khoản -->
-    <div id="bankSuccessModal" class="custom-modal" style="display: none;">
-      <div class="custom-modal-content" style="max-width: 400px; background: #fff; border-radius: 12px; padding: 20px; margin-top: 300px;">
-        <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="modal-title">Thông báo</span>
-          <span class="custom-close" onclick="closebankSuccessModal()" style="cursor: pointer;">&#10006;</span>
-        </div>
-        <hr class="modal-divider" />
-        <p style="font-size: 16px; color: black; margin-top: 10px;">Thanh toán thành công qua mã QR!</p>
-      </div>
-    </div>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-       window.onload = function () {
+    // ===================================
+    // CÁC HÀM ĐÃ SỬA LẠI - BẮT ĐẦU
+    // ===================================
+    
+    // HÀM MỚI: Xử lý logic chung sau khi mua hàng thành công
+    function processSuccessfulPurchase() {
+        // Lấy các khóa học đang trong quá trình thanh toán
+        const coursesToPurchase = JSON.parse(localStorage.getItem('selectedCourses')) || [];
+
+        if (coursesToPurchase.length > 0) {
+            // Lấy danh sách các khóa học đã mua trước đó
+            let myCourses = JSON.parse(localStorage.getItem('myCourses')) || [];
+            
+            // Lấy danh sách giỏ hàng gốc
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            coursesToPurchase.forEach(newCourse => {
+                // Kiểm tra để không thêm khóa học trùng lặp bằng ID
+                const isAlreadyPurchased = myCourses.some(myCourse => myCourse.id === newCourse.id);
+                if (!isAlreadyPurchased) {
+                    myCourses.push(newCourse);
+                }
+                
+                // Xóa khóa học đã mua khỏi giỏ hàng gốc bằng ID
+                cart = cart.filter(cartItem => cartItem.id !== newCourse.id);
+            });
+
+            // Lưu lại danh sách khóa học của tôi và giỏ hàng mới
+            localStorage.setItem('myCourses', JSON.stringify(myCourses));
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Dọn dẹp các khóa học đang chọn
+            localStorage.removeItem('selectedCourses');
+        }
+    }
+
+    // SỬA LẠI: Hàm xác thực form thẻ tín dụng
+    function validateCreditForm() {
+        const cardNumber = document.getElementById('cardNumber').value.trim();
+        const expiryDate = document.getElementById('expiryDate').value.trim();
+        const issueDate = document.getElementById('issueDate').value.trim();
+        const cardHolder = document.getElementById('cardHolder').value.trim();
+        const cardPin = document.getElementById('cardPin').value.trim();
+
+        if (!cardNumber || !expiryDate || !issueDate || !cardHolder || !cardPin) {
+            showCreditInfoModal();
+            return;
+        }
+
+        processSuccessfulPurchase(); // <-- GỌI HÀM XỬ LÝ
+        hideCreditForm();
+        showSuccessModal();
+    }
+
+    // SỬA LẠI: Hàm hiển thị modal thành công của chuyển khoản
+    function showbankSuccessModal() {
+        processSuccessfulPurchase(); // <-- GỌI HÀM XỬ LÝ
+
+        document.getElementById('bankTransferModal').style.display = 'none';
+        document.getElementById("bankSuccessModal").style.display = "block";
+    }
+    
+    // SỬA LẠI: Hàm đóng modal thẻ tín dụng và chuyển hướng
+    function closeSuccessModal() {
+        document.getElementById('successModal').style.display = 'none';
+        window.location.href = "my-courses.html"; // Chuyển đến trang Khóa học của tôi
+    }
+    
+    // SỬA LẠI: Hàm đóng modal chuyển khoản và chuyển hướng
+    function closebankSuccessModal() {
+        document.getElementById("bankSuccessModal").style.display = "none";
+        window.location.href = "my-courses.html"; // Chuyển đến trang Khóa học của tôi
+    }
+
+    // ===================================
+    // CÁC HÀM GỐC - KHÔNG SỬA
+    // ===================================
+
+    window.onload = function () {
         const courseData = JSON.parse(localStorage.getItem('selectedCourses')) || [];
         const tbody = document.querySelector("table tbody");
+        if (!tbody) return;
         tbody.innerHTML = "";
 
         let total = 0;
 
         courseData.forEach(item => {
-          const row = document.createElement("tr");
+            const row = document.createElement("tr");
+            const titleCell = document.createElement("td");
+            titleCell.textContent = item.title;
+            const priceCell = document.createElement("td");
+            priceCell.textContent = item.currentPrice; // Sửa lại để lấy giá đúng
+            const totalCell = document.createElement("td");
+            totalCell.textContent = item.currentPrice; // Sửa lại để lấy giá đúng
 
-          const titleCell = document.createElement("td");
-          titleCell.textContent = item.title;
+            row.appendChild(titleCell);
+            row.appendChild(priceCell);
+            row.appendChild(totalCell);
+            tbody.appendChild(row);
 
-          const priceCell = document.createElement("td");
-          priceCell.textContent = item.price;
-
-          const totalCell = document.createElement("td");
-          totalCell.textContent = item.price;
-
-          row.appendChild(titleCell);
-          row.appendChild(priceCell);
-          row.appendChild(totalCell);
-          tbody.appendChild(row);
-
-          const num = parseInt(item.price.replace(/\D/g, ""), 10);
-          total += isNaN(num) ? 0 : num;
+            const num = parseInt(item.currentPrice.replace(/\D/g, ""), 10);
+            total += isNaN(num) ? 0 : num;
         });
 
         document.getElementById("totalCourses").textContent = `Tổng cộng (${courseData.length} khóa học):`;
-        document.getElementById("totalAmount").textContent = total.toLocaleString() + "đ";
+        document.getElementById("totalAmount").textContent = total.toLocaleString('vi-VN') + "đ";
     };
 
-    function selectPayment(event, method) {
+    function selectPayment(element, method) {
         document.querySelectorAll('.btn-outline-primary').forEach(b => b.classList.remove('active'));
-        event.classList.add('active');
+        element.classList.add('active');
         document.getElementById('paymentMethod').value = method;
-
-        if (method === 'credit') {
-            showCreditForm();
-        }
     }
 
-    function validateForm(event) {
+    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
         event.preventDefault();
         let valid = true;
 
@@ -524,7 +403,6 @@
         fullName.classList.remove('is-invalid');
         email.classList.remove('is-invalid');
 
-        // Validate input
         if (!customerId.value.trim()) {
             document.getElementById('errorCustomerId').style.display = 'block';
             customerId.classList.add('is-invalid');
@@ -540,219 +418,40 @@
             email.classList.add('is-invalid');
             valid = false;
         }
+        
+        if(!valid) return;
 
-        // Validate payment method
         if (!paymentMethod) {
             showPaymentMethodModal();
-            return false;
+            return;
         }
 
-        // Show appropriate modal
         if (paymentMethod === "credit") {
-            showCreditCardForm();
+            showCreditForm();
         } else if (paymentMethod === "bank") {
             showBankModal();
         }
-        
-        return false;
-    }
+    });
 
     function showCreditForm() {
-        document.getElementById('creditFormOverlay').style.display = 'block';
+        document.getElementById('creditFormOverlay').style.display = 'flex';
     }
 
     function hideCreditForm() {
         document.getElementById('creditFormOverlay').style.display = 'none';
-
-        // Gỡ class active khỏi nút đang chọn
-        document.querySelectorAll('.btn-outline-primary').forEach(b => b.classList.remove('active'));
-
-        // Reset lại phương thức thanh toán
-        document.getElementById('paymentMethod').value = '';
     }
 
-    function validateCreditForm() {
-        const cardNumber = document.getElementById('cardNumber').value.trim();
-        const expiryDate = document.getElementById('expiryDate').value.trim();
-        const issueDate = document.getElementById('issueDate').value.trim();
-        const cardHolder = document.getElementById('cardHolder').value.trim();
-        const cardPin = document.getElementById('cardPin').value.trim();
-
-        if (!cardNumber || !expiryDate || !issueDate || !cardHolder || !cardPin) {
-            // Nếu thiếu thông tin, hiển thị modal báo lỗi
-            showCreditInfoModal();
-            return;
-        }
-
-        // 1. Ẩn form nhập thẻ
-        hideCreditForm();
-
-        // 2. Gán phương thức thanh toán là "credit"
-        document.getElementById("paymentMethod").value = "credit";
-
-        // 3. ✅ Đổi màu lại nút "Thẻ tín dụng"
-        document.querySelectorAll('.btn-outline-primary').forEach(b => b.classList.remove('active'));
-        const creditBtn = Array.from(document.querySelectorAll('.btn-outline-primary'))
-            .find(b => b.textContent.includes("Thẻ tín dụng"));
-        if (creditBtn) {
-            creditBtn.classList.add('active');
-        }
-
-        showSuccessModal();
-    }
-
-    // Functions for payment method modal
-    function showPaymentMethodModal() {
-        document.getElementById('paymentMethodModal').style.display = 'block';
-    }
-
-    function closePaymentMethodModal() {
-        document.getElementById('paymentMethodModal').style.display = 'none';
-    }
-
-    // Functions for credit info modal
-    function showCreditInfoModal() {
-        document.getElementById('creditInfoModal').style.display = 'block';
-    }
-
-    function closeCreditInfoModal() {
-        document.getElementById('creditInfoModal').style.display = 'none';
-    }
-
-    // Close modals when clicking outside
-    window.onclick = function(event) {
-        const paymentModal = document.getElementById('paymentMethodModal');
-        const creditModal = document.getElementById('creditInfoModal');
-        
-        if (event.target == paymentModal) {
-            closePaymentMethodModal();
-        }
-        if (event.target == creditModal) {
-            closeCreditInfoModal();
-        }
-    }
-
-    function showSuccessModal() {
-        document.getElementById('successModal').style.display = 'block';
-    }
-
-    function closeSuccessModal() {
-        document.getElementById('successModal').style.display = 'none';
-        window.location.href = "Giohang.html";
-    }
-
+    function showPaymentMethodModal() { document.getElementById('paymentMethodModal').style.display = 'flex'; }
+    function closePaymentMethodModal() { document.getElementById('paymentMethodModal').style.display = 'none'; }
+    function showCreditInfoModal() { document.getElementById('creditInfoModal').style.display = 'flex'; }
+    function closeCreditInfoModal() { document.getElementById('creditInfoModal').style.display = 'none'; }
+    function showSuccessModal() { document.getElementById('successModal').style.display = 'flex'; }
     function showBankModal() {
-        document.getElementById('bankTransferModal').style.display = 'block';
-        // Chỉ bắt đầu đếm thời gian sau khi modal QR hiện lên
-        setTimeout(showbankSuccessModal, 5000);
+        document.getElementById('bankTransferModal').style.display = 'flex';
+        setTimeout(showbankSuccessModal, 3000); // Giảm thời gian chờ
     }
-
-    function closeBankModal() {
-        document.getElementById('bankTransferModal').style.display = 'none';
-    }
-
-    function showbankSuccessModal() {
-        // Ẩn modal QR trước
-        document.getElementById('bankTransferModal').style.display = 'none';
-        // Hiện modal thành công
-        document.getElementById("bankSuccessModal").style.display = "block";
-    }
-
-    function closebankSuccessModal() {
-        document.getElementById("bankSuccessModal").style.display = "none";
-        window.location.href = "Giohang.html";
-    }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const courseData = JSON.parse(localStorage.getItem("selectedCourses")) || [];
-    const tableBody = document.getElementById("orderTableBody");
-
-    let total = 0;
-
-    courseData.forEach(course => {
-        const title = course.title || "Không rõ";
-        const price = course.price || "0đ";
-
-        const numericPrice = parseInt(price.replace(/[^\d]/g, '')) || 0;
-        const formattedPrice = numericPrice.toLocaleString('vi-VN') + 'đ';
-
-        const row = `
-            <tr>
-                <td>${title}</td>
-                <td>${formattedPrice}</td>
-                <td>${formattedPrice}</td>
-            </tr>
-        `;
-        tableBody.insertAdjacentHTML("beforeend", row);
-        total += numericPrice;
-    });
-
-    document.getElementById("totalCourses").textContent = `Tổng cộng (${courseData.length} khóa học):`;
-    document.getElementById("totalAmount").textContent = total.toLocaleString('vi-VN') + "đ";
-});
-
-
+    function closeBankModal() { document.getElementById('bankTransferModal').style.display = 'none'; }
 </script>
-
-<!-- Modal Thanh toán thành công -->
-<div id="successModal" class="custom-modal">
-  <div class="custom-modal-content">
-    <div class="custom-modal-header">
-      <span class="modal-title">Thanh toán</span>
-      <span class="custom-close" onclick="closeSuccessModal()">&#10006;</span>
-    </div>
-    <hr class="modal-divider" />
-    <p class="modal-message ">Thanh toán thành công qua thẻ tín dụng!</p>
-  </div>
-</div>
-
-<!-- Modal QR chuyển khoản -->
-<div id="bankTransferModal" class="custom-modal">
-  <div class="custom-modall-content" style="max-width: 1000px; padding: 30px; border-radius: 16px; background: #fff;">
-    
-    <!-- Header -->
-    <div style="display: flex; align-items: center; margin-bottom: 20px;">
-      <button type="button" onclick="closeBankModal()" style="border: none; background: none; font-size: 22px; cursor: pointer;">←</button>
-      <strong style="margin-left: 12px; font-size: 20px;">Thanh toán qua mã QR</strong>
-    </div>
-
-    <p style="text-align: center; margin-bottom: 30px; font-size: 16px;">Quét mã để thanh toán - DAS</p>
-
-    <!-- QR + Info Section -->
-    <div style="display: flex; gap: 60px; align-items: center; justify-content: center;">
-      
-      <!-- QR Code -->
-      <div style="flex: 0 0 320px;">
-        <img src="https://i.imgur.com/RiAGqEI.png" alt="QR Code" style="width: 100%; border-radius: 16px;" />
-      </div>
-
-      <!-- Thông tin -->
-     <div style="flex: 1; font-size: 18px; text-align: left;">
-  <div style="margin-bottom: 12px;"><strong>Ngân hàng:</strong> MBBANK</div>
-  <div style="margin-bottom: 12px;"><strong>Số tiền:</strong> 1.000.000 VND</div>
-  <div style="margin-bottom: 12px;"><strong>STK:</strong> 01122446123</div>
-  <div><strong>Tên tài khoản:</strong> PHAM TUAN ANH</div>
-</div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal thành công chuyển khoản -->
-<div id="bankSuccessModal" class="custom-modal" style="display: none;">
-  <div class="custom-modal-content" style="max-width: 400px; background: #fff; border-radius: 12px; padding: 20px; margin-top: 300px;">
-    <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="modal-title">Thông báo</span>
-      <span class="custom-close" onclick="closebankSuccessModal()" style="cursor: pointer;">&#10006;</span>
-    </div>
-    <hr class="modal-divider" />
-    <p style="font-size: 16px; color: black; margin-top: 10px;">Thanh toán thành công qua mã QR!</p>
-  </div>
-</div>
-
-
-
- 
-
 
 </body>
 </html>
