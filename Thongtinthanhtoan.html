@@ -217,7 +217,8 @@
                                         <th>Thành tiền</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="orderTableBody">
+
                                     <!-- Dữ liệu sẽ được thêm động -->
                                 </tbody>
                             </table>
@@ -661,6 +662,35 @@
         document.getElementById("bankSuccessModal").style.display = "none";
         window.location.href = "Giohang.html";
     }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const courseData = JSON.parse(localStorage.getItem("selectedCourses")) || [];
+    const tableBody = document.getElementById("orderTableBody");
+
+    let total = 0;
+
+    courseData.forEach(course => {
+        const title = course.title || "Không rõ";
+        const price = course.price || "0đ";
+
+        const numericPrice = parseInt(price.replace(/[^\d]/g, '')) || 0;
+        const formattedPrice = numericPrice.toLocaleString('vi-VN') + 'đ';
+
+        const row = `
+            <tr>
+                <td>${title}</td>
+                <td>${formattedPrice}</td>
+                <td>${formattedPrice}</td>
+            </tr>
+        `;
+        tableBody.insertAdjacentHTML("beforeend", row);
+        total += numericPrice;
+    });
+
+    document.getElementById("totalCourses").textContent = `Tổng cộng (${courseData.length} khóa học):`;
+    document.getElementById("totalAmount").textContent = total.toLocaleString('vi-VN') + "đ";
+});
+
 
 </script>
 

@@ -349,76 +349,7 @@
 
                     <!-- Cart Content -->
                     <div class="cart-content">
-                        <!-- Cart Item 1 -->
-                        <div class="cart-item">
-                            <input class="form-check-input" type="checkbox" checked>
-                            <div class="course-info">
-                                <div class="course-image">
-                                    <i class="bi bi-code-slash"></i>
-                                </div>
-                                <div class="course-details-info">
-                                    <div class="course-title">Khóa học HTML CSS từ Zero tới Hero</div>
-                                    <div class="course-instructor">Giảng viên: Sơn Đặng</div>
-                                    <div class="course-details">
-                                        <span><i class="bi bi-clock"></i> 40 giờ</span>
-                                        <span><i class="bi bi-play-circle"></i> 120 bài học</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-price">1.299.000đ</div>
-                            <div class="course-total-price">0đ</div>
-                            <button class="remove-btn" onclick="removeItem(this)">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-
-
-                        <!-- Cart Item 2 -->
-                        <div class="cart-item">
-                            <input class="form-check-input" type="checkbox" checked>
-                            <div class="course-info">
-                                <div class="course-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                    <i class="bi bi-laptop"></i>
-                                </div>
-                                <div class="course-details-info">
-                                    <div class="course-title">Khóa học JavaScript cơ bản</div>
-                                    <div class="course-instructor">Giảng viên: Nguyễn Văn A</div>
-                                    <div class="course-details">
-                                        <span><i class="bi bi-clock"></i> 30 giờ</span>
-                                        <span><i class="bi bi-play-circle"></i> 85 bài học</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-price">999.000đ</div>
-                            <div class="course-total-price">0đ</div>
-                            <button class="remove-btn" onclick="removeItem(this)">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-
-
-                        <!-- Cart Item 3 -->
-                        <div class="cart-item">
-                            <input class="form-check-input" type="checkbox">
-                            <div class="course-info">
-                                <div class="course-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                                    <i class="bi bi-database"></i>
-                                </div>
-                                <div class="course-details-info">
-                                    <div class="course-title">Khóa học React.js từ cơ bản tới nâng cao</div>
-                                    <div class="course-instructor">Giảng viên: Trần Thị B</div>
-                                    <div class="course-details">
-                                        <span><i class="bi bi-clock"></i> 50 giờ</span>
-                                        <span><i class="bi bi-play-circle"></i> 150 bài học</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="course-price">1.599.000đ</div>
-                            <div class="course-total-price">0đ</div>
-                            <button class="remove-btn" onclick="removeItem(this)">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
+                        
                     </div>
 
 
@@ -544,61 +475,26 @@
     <script>
         // Hàm xử lý thanh toán
         function proceedToCheckout() {
-            const selectedItems = document.querySelectorAll('.cart-item input[type="checkbox"]:checked');
-           
-            if (selectedItems.length === 0) {
-                const modal = document.getElementById('emptyCartModal');
-                modal.style.display = 'block';
-                return;
-            }
+    const selectedItems = document.querySelectorAll('.cart-item input[type="checkbox"]:checked');
+    
+    if (selectedItems.length === 0) {
+        const modal = document.getElementById('emptyCartModal');
+        modal.style.display = 'block';
+        return;
+    }
 
+    const selectedCourses = [];
+    selectedItems.forEach(item => {
+        const cartItem = item.closest('.cart-item');
+        const title = cartItem.querySelector('.course-title').textContent;
+        const price = cartItem.querySelector('.course-price').textContent;
+        selectedCourses.push({ title, price });
+    });
 
-            const selectedCourses = [];
-            selectedItems.forEach(item => {
-                const cartItem = item.closest('.cart-item');
-                const title = cartItem.querySelector('.course-title').textContent;
-                const price = cartItem.querySelector('.course-price').textContent;
-                selectedCourses.push({ title, price });
-            });
+    // ✅ Thêm dòng này:
+    localStorage.setItem('selectedCourses', JSON.stringify(selectedCourses));
 
-
-            window.location.href = 'Thongtinthanhtoan.html';
-        }
-
-
-        // Event listeners
-        document.getElementById('selectAll').addEventListener('change', function () {
-            const checkboxes = document.querySelectorAll('.cart-item .form-check-input');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = this.checked;
-            });
-            updateTotal();
-        });
-
-
-        document.querySelectorAll('.cart-item .form-check-input').forEach(checkbox => {
-            checkbox.addEventListener('change', updateTotal);
-        });
-
-
-        function removeItem(button) {
-  if (confirm('Bạn có chắc chắn muốn xóa khóa học này khỏi giỏ hàng?')) {
-    const item = button.closest('.cart-item');
-    const title = item.querySelector('.course-title').textContent;
-
-
-    // Xóa khỏi giao diện
-    item.remove();
-
-
-    // Xóa khỏi localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = cart.filter(course => course.title !== title);
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-
-    updateTotal();
-  }
+    window.location.href = 'Thongtinthanhtoan.html';
 }
 
 
