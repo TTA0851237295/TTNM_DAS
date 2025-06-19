@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAS Học Lập Trình Để Đi Làm</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo.png" alt="DAS Logo" class="logo">
+                
+            </a>
+            <div class="navbar-brand d-flex align-items-center">DAS Học Lập Trình Để Đi Làm</div>
+            
+            <div class="search-box mx-auto">
+                <div class="position-relative">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="text" class="form-control" placeholder="Tìm kiếm khóa học..." id="searchInput">
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <i class="bi bi-bell"></i>
+                <span>Tuấn Anh</span>
+                <i class="bi bi-person-circle fs-4" id="userIcon"></i>
+                <!-- User Dropdown -->
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            TTA
+                        </div>
+                        <div class="user-details">
+                            <h5>Tuấn Anh</h5>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="dropdown-menu-items">
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-person"></i>
+                            <span>Trang cá nhân</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Lịch sử mua</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-gear"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <a href="index.html" class="sidebar-item active">
+                    <i class="bi bi-house-door-fill sidebar-icon"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="Giohang.html" class="sidebar-item">
+                    <i class="bi bi-cart3 sidebar-icon"></i>
+                    <span>Giỏ hàng</span>
+                </a>
+                <a href="my-courses.html" class="sidebar-item">
+                    <i class="bi bi-book sidebar-icon"></i>
+                    <span>Khóa học</span>
+                </a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content search-page">
+            
+                <div class="mb-3">
+                    <a href="index.html" class="btn btn-outline-secondary">
+                        ← Quay lại
+                    </a>
+                </div>
+            
+                <h1 class="page-title mb-4">Tìm kiếm</h1>
+            
+                <p class="mb-3 text-muted">Tìm kiếm khóa học, video ...</p>
+            
+                 
+            
+                <!-- Kết quả -->
+                <h6 class="mb-2 fw-bold">Khóa học</h6>
+                <hr class="mb-3" style="opacity:.2">
+            
+                <div id="courseGrid" class="result-list">
+                    <!-- createCourseCard() sẽ bơm nội dung ở đây -->
+                </div>
+            </div>
+            <!-- /Main Content -->
+
+
+
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <div class="footer-brand">
+                        <img src="img/logo.png" alt="DAS Logo" class="logo">
+                        <div class="brand-text">Học Lập Trình Để Đi Làm</div>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Điện thoại:</strong> 08 1919 8989</p>
+                        <p><strong>Email:</strong> contact@fullstack.edu.vn</p>
+                        <p><strong>Địa chỉ:</strong> Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+                    </div>
+                    <div class="dmca-badge">
+                        <div style="background: #00a8ff; color: white; padding: 8px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold;">
+                            DMCA PROTECTED
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About DAS -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">VỀ DAS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Điều khoản</a></li>
+                        <li><a href="#">Bảo mật</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">SẢN PHẨM</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Game Nester</a></li>
+                        <li><a href="#">Game CSS Diner</a></li>
+                        <li><a href="#">Game CSS Selectors</a></li>
+                        <li><a href="#">Game Froggy</a></li>
+                        <li><a href="#">Game Froggy Pro</a></li>
+                        <li><a href="#">Game Scoops</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="col-lg-2 col-md-6 footer-section">
+                    <h4 class="footer-title">CÔNG CỤ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tạo CV xin việc</a></li>
+                        <li><a href="#">Rút gọn liên kết</a></li>
+                        <li><a href="#">Clip-path maker</a></li>
+                        <li><a href="#">Snippet generator</a></li>
+                        <li><a href="#">CSS Grid generator</a></li>
+                        <li><a href="#">Cảnh báo sờ tay lên mặt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Details -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h4 class="footer-title">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC DAS</h4>
+                    <div class="contact-info">
+                        <p><strong>Mã số thuế:</strong> 0109922901</p>
+                        <p><strong>Ngày thành lập:</strong> 04/03/2022</p>
+                        <p><strong>Lĩnh vực hoạt động:</strong> Giáo dục, công nghệ - lập trình. Chúng tôi tập trung xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập trình viên Việt Nam.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2018 - 2025 DAS. Nền tảng học lập trình hàng đầu Việt Nam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/courses.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/coursesEvent.js"></script>
+
+    <script>
+    /* Khi load trang, lấy keyword đã lưu rồi tự động tìm */
+    document.addEventListener('DOMContentLoaded', () => {
+        const kw = localStorage.getItem('searchKeyword') || '';
+        const input = document.getElementById('searchInput');
+        input.value = kw;
+        loadCourses();      // hàm cũ – vẽ toàn bộ khóa học
+        searchCourses();    // lọc theo từ khóa
+    });
+</script>
+</body>
+</html>
